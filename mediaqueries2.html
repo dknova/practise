@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width:968px) {
+             body{
+                background-color: chartreuse;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }   
+        }
+
+        nav{
+            background-color: cadetblue;
+            padding: 15px;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li{
+            margin: 0;
+        }
+
+        nav ul li a{
+            color: azure;
+            text-decoration: none;
+            font-size: large;
+            padding: 10px;
+            position: relative;
+            transition: 1s;
+        }
+
+        nav ul li a:hover{
+            color: #000;
+        }
+
+      
+        nav ul li a::after{
+            content: none;
+            position: absolute;
+            left :0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: brown;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover::after{
+            width: 100%;
+            transform: scale(1.1);
+        }
+
+        h1{
+            color:brown ;
+            padding: 10px;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-transform: uppercase;
+            text-decoration-line: underline;
+            text-decoration-color: chocolate;
+            word-spacing: 10px;
+        }
+
+        .container{
+            display: flex;
+            align-items:center;
+            justify-content: baseline;
+            padding: 20px;
+        }
+
+        .box{
+            width:500px;
+            background-color: beige;
+            margin: 20px;
+            border: brown;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(red, green, blue, alpha);
+            border-radius: 10px;
+            
+        }
+
+        .box img{
+            width:500px;
+            height: 450px;
+            background-color: rgb(132, 132, 216);
+            padding: 10px;
+            transition: 0.3s;
+            object-fit: cover;
+
+        }
+
+        .box:hover img{
+            transform: scale(1.1);
+        }
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <h1><center>Welcome to Pizza 'O' hut</center></h1>
+    <div class="container">
+        <div class="box">
+        <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/margherita.5f4ef870fb437d0f7e82360758641f2b.1.jpg" alt="Margarita pizza" height="300px" width="350px"><br>
+        <h3><center>Margerita Pizza</center></h3><br><br>
+</div>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB4nWypfPx0hRoBXMvQFDBPZ15q201uXy4YFV8qxWYuOI928VH2a_pVEY&s=10" alt="Panner Pizza" height="300px width=350px"><br>
+            <h3><center>Panner Pizza</center></h3><br><br>
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlSzs4OhZioRI3jEppnD3TkAJhlFAqQI4i9l1gj3_UOw&s=10" alt="Thin Crust" height="300px" width="350px"><br>
+            <h3><center>Thin Crust Pizza</center></h3><br><br>
+        </div>
+    </div>
+</body>
+</html>
