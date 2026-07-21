@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            position: relative;
+            z-index: 1;
+            background-color: aquamarine;
+            padding: 20px;
+            margin: 30px;
+        }
+
+        .child{
+            position: relative;
+            z-index: 999;
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        .sibling{
+            position: relative;
+            z-index: 1;
+            background-color: brown;
+            padding: 30px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent
+        <div class="child">
+            Child
+        </div>
+</div>
+        <div class="sibling">
+            Sibling
+        </div>
+    
+</body>
+</html>
