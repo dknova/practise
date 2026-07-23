@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+        }
+
+        header{
+            background-color: rgb(219, 99, 99);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar{
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            background-color: beige ;
+            padding: 5px;
+        }
+
+        nav li{
+            padding:5px;
+            transition: 1s;
+        }
+
+       nav li a{
+        font-size: larger;
+       }
+
+        nav li a:hover{
+            background-color: rgb(219, 143, 215);
+        }
+
+        aside{
+            width: 20%;
+            float:left;
+            padding: 10px;
+            background-color: aquamarine;
+            margin-right: 5px;  
+            margin-top: 5px; 
+            margin-left: 40px;
+        }
+
+        section{
+            width: 40%;
+            float: left;
+            padding:10px;
+            background-color: burlywood;
+            margin-right: 5px;
+            margin-top: 5px;
+
+        }
+
+        article{
+            width:35%;
+            float: left;
+            padding: 10px;
+            background-color: rgb(214, 123, 80);
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        footer{
+            display: block;
+            clear:both;
+            background-color: cadetblue;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media screen and (max-width:768px){
+            aside, section, article{
+                width: 100%
+            }
+        }
+     
+     
+    </style>
+</head>
+<body>
+        <header>
+            <h2>Header</h2>
+       
+        <nav class="navbar">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">More</a></li>
+        </nav>
+</header>
+
+        <main>
+            <aside>
+                <h2>This is aside</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eum debitis rem veniam iure tenetur alias, labore nam quod inventore illo fugit suscipit obcaecati maxime maiores ipsum ad sed enim.</p>
+            </aside>
+
+            <section>
+                <h2>This is section</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa est minus inventore nemo laboriosam fugiat vero, nobis ad et a quibusdam ullam iure nulla necessitatibus eaque fugit dolore ab dicta.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nobis aut dolor eos dolore nesciunt blanditiis voluptatum fugit animi repellat. Voluptatem officiis tempora dolore sed error? Doloribus quos veniam neque?</p>
+            </section>
+
+            <article>
+                <h2>This is article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem, iste cupiditate nostrum voluptates laboriosam sed assumenda iusto! Tempora adipisci nostrum magnam illo iste laboriosam molestias ex nam illum commodi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident ipsam est, molestias quod quasi rerum atque deserunt aut, expedita animi placeat. Delectus totam officiis omnis similique dicta? Fugit, molestiae!</p>
+            </article>
+        </main>
+
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+</body>
+</html>
