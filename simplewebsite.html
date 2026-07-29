@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 0;
+            
+        }
+
+        nav{
+            justify-content: space-around;
+            align-items: center;
+            position:relative;
+        }
+        
+        nav ul{
+            display:flex;
+            justify-content:space-around;
+            align-items:center ;
+            padding:10px;
+            background-color: rgba(146, 70, 40, 0.2);
+            list-style: none;
+    
+        }
+
+        nav ul a{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: orangered;
+            border: 3px;
+            transition: 1s;
+        }
+
+        nav ul a:hover{
+            color: rgb(238, 234, 224);
+        }
+        nav ul img{
+            height: 50px;
+            width: 100px;
+        }
+
+        nav ul button{
+            width:120px;
+            height: 50px;
+            display: inline-flex;
+            align-items:center;
+            justify-content: center;white-space: nowrap;font-size: 15px;
+            padding:10px 25px;
+            border: 2px solid brown;
+            background-color: antiquewhite;
+            color: rgb(50, 47, 51) ;
+         
+           
+        }
+
+        nav ul button:hover{
+            color: rgb(15, 13, 8);
+        }
+
+        .hero{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 150px;
+        }
+       
+        .hero-text1 h1{
+            color: azure;
+            font-size: 55px;
+        }
+
+        .hero-text1 h3{
+            margin-top: 45px;
+            color: orange;
+            line-height: 2em;
+        }
+
+        .hero-text1 p{
+            margin-top: 45px;
+            color:antiquewhite;
+            line-height: 2em;
+        }
+        .hero-text2{
+            width: 350px;
+            height:400px;
+            padding: 30px;
+            border: 2px solid rgba(255, 1, 125, 0.2);
+            border-radius: 20px;
+            background: rgba(0,0,0,0.5);
+            box-shadow: 0 0 0 10px #5e4f55, 0 0 20px #547a7a, 0 0 30px #5e4f55;
+            transition: 1s;
+        }
+
+        .hero-text2:hover{
+            transform:scale(1.1)
+        }
+
+        .hero-text2 h3{
+            color: chocolate;
+            margin-top: 40px;
+        }
+
+        .hero-text2 a{
+            color: coral;
+            transition: 1s;
+            
+        }
+
+        .hero-text2 a:hover{
+            color: rgb(140, 140, 247);
+        }
+
+        input{
+            width:280px;
+            height:30px;
+            padding:5px;
+            border: 2px solid brown;
+            border-radius: 30px;
+            transition: 1s;
+        }
+
+        input:hover{
+            transform: scale(1.1);
+        }
+        
+        button{
+            height: 30px;
+            width:90px;
+            margin-top: 25px;
+            border: 2px solid brown;
+            border-radius: 30px;
+            transition: 1s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1em
+        }
+
+        button:hover{
+            background-color: #f0a440;
+            transform: scale(1.1);
+        }
+        .area{
+            background: #5e4f55;
+            background: -webkit-linear-gradient(to left,#7e7e7e,#5e4f55);
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(29, 27, 27, 0.5),rgba(0,0,0,0.5)),url("https://th.bing.com/th/id/OIP.x3-1WjxZjLYKLo8GEZE7DQHaEJ?w=315&h=180&c=7&r=0&o=7&pid=1.7&rm=3");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            }
+
+        .circles{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .circles li{
+            position: absolute;
+            display: block;
+            list-style: none;
+            width:20px;
+            height:20px;
+            background: rgba(255, 1, 125, 0.2);
+            bottom: -150px;
+            animation: animate 25s linear infinite;
+        }
+
+        .circles li:nth-child(1){
+            left: 30%;
+            width:30px;
+            height:30px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2){
+            left: 50%;
+            width:40px;
+            height:40px;
+            animation-delay: 2s;
+            animation-duration: 10s;
+        }
+
+        .circles li:nth-child(3){
+            left: 60%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 2s;
+        }
+
+        .circles li:nth-child(4){
+            left: 70%;
+            width:50px;
+            height: 5px;
+            animation-delay: 4s;
+            animation-duration: 14s;
+        }
+
+        .circles li:nth-child(5){
+            left:80%;
+            width: 55px;
+            height: 55px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(6){
+            left:65%;
+            width:30px;
+            height:30px;
+            animation-delay: 0s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(7){
+            left:75%;
+            width:40px;
+            height:40px;
+            animation-delay: 6s;
+        }
+
+        .circles li:nth-child(8){
+            left:20%;
+            width:110px;
+            height:110px;
+            animation-delay: 4s;
+            animation-duration: 11s;
+        }
+
+        .circles li:nth-child(9){
+            left: 90%;
+            width:48px;
+            height: 48px;
+            animation-delay: 0s;
+            animation-duration: 30s;
+        }
+
+        .circles li:nth-child(10){
+            left:10%;
+            width:50px;
+            height:50px;
+            animation-delay: 6s;
+            animation-duration: 15s;
+        }
+
+        @keyframes animate{
+            0%{
+                transform: translateY(o) rotate(0deg);
+                opacity: 1;
+                border-radius: 50px;
+            }
+
+            100%{
+                transform: translateY(-1000px) rotate(150deg);
+                opacity:0;
+                border-radius: 50px;
+            }
+        }
+
+        main{
+            background-color:rgb(255, 254, 252);
+        }
+
+        .Principles{
+            box-sizing: content-box;
+        }
+        .Principles h2{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            padding: 20px;
+            color: brown;
+            text-align: center;
+
+        }
+
+        .principle-text{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(2,1fr);
+            gap:30px;
+            width: 100%;
+            margin:10px;
+            
+        }
+
+        .card{
+            background: rgb(225, 225, 233);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0 0 0 0.1);
+            width: 30%;
+            height: 40%;
+            transition: 1s;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .card:hover{
+            transform: scale(1.1);
+            background-color:#f0a440 ;
+        }
+
+        .card h3{
+            color: chocolate;
+        }
+
+        .card span{
+            color: black;
+        }
+
+        .card p{
+            line-height: 2em;
+            color: #5e4f55;
+        }
+
+        .services{
+            background-color: #eceed2b0;
+            width: 100%;
+        }
+
+        .services h2{
+            font-size: smaller;
+            border:2px solid brown;
+            width:160px;
+            border-radius: 30px;
+            padding: 10px;
+            background: rgba(228, 140, 78, 0.712);
+            transition: 1s;
+        }
+
+        .services h3{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            padding: 20px;
+            color: brown;
+            text-align: center;
+        }
+
+        .services h4{
+            color: #7e7e7e;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .service-text{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(2,1fr);
+            gap:30px;
+            width: 100%;
+            margin:10px;  
+            box-sizing: content-box;
+        }
+
+        .box{
+            background: rgb(225, 225, 233);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0 0 0 0.1);
+            width: 30%;
+            height: 40%;
+            transition: 1s;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border:2px solid brown;
+            border-width: 1px;
+            line-height: 2em;
+            box-sizing: border-box;
+            width: 80%;
+            border: solid #5b6dcd 5px;
+            
+        }
+
+        .box:hover{
+            background-color: rgb(241, 198, 119);
+        }
+
+        .box h3{
+            color: #030735;
+            font-size: 20px;
+            text-decoration: underline;
+            margin: 0;
+        }
+
+        .box p{
+            color: #5e4f55;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        footer{
+            background-color: #0409367a;
+            color: rgba(78, 6, 6, 0.986);
+            padding:10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        @media (max-width:768px) {
+            nav ul{
+                flex-direction: column;
+                text-align: center;
+            }
+
+             nav ul li{
+                margin:10px 0;
+            }
+
+            .hero h1{
+                font-size: 40px;
+            }
+            
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="area">
+        <nav>
+            <ul>
+            <img src="https://support.dobig.in/assets/images/dobig-logo.png" alt= "" >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#"><button>📞Contact Us</button></a></li>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-text1">
+            <h1>Infrastructure. Cloud. Software.<br>
+                Done Right.</h1><br>
+            <h3>We design, deploy, and manage the technology that keeps your<br> business running — so you can focus on growing it.</h3>
+            <p>Trusted by businesses across India for managed hosting, <br>multi-cloud solutions, and enterprise software services.</p>
+            </div>
+
+            <div class="hero-text2">
+                <form>
+                    <center>
+                        <legend>
+                            <h3>SIGN UP</h3><br>
+                            <a href="">Already a user? Log in</a><br><br><br>
+                            <input type="email" placeholder="Email"><br><br><br>
+                            <input type="password" placeholder="Password"><br><br><br>
+                            <button>SUBMIT</button>>
+                        </legend>
+                    </center>
+                </form>
+            </div>
+        </div>
+
+        <div class="circles">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        </div>
+</header>
+    <main>
+        <section class="Principles">
+            <h2><center>Our Principles</center></h2>
+            <div class="principle-text">
+            <div class="card">
+                    <h3>Ownership <span>Over Excuses</span></h3><br>
+                    <p>When something breaks,we fix it.We dont blame vendors,point at other teams or 
+                        hide behind ticket numbers. Your problem is our problem until it's solved. 
+                    </p>
+                </div>
+
+            <div class="card">
+                <h3>Clarity<span> Complexity</span></h3><br>
+                <p>Technology is complicated enough.Our job is to make it simple for you. Clear
+                communication, honest recommendations, and no jargon-filled proposals. </p>
+            </div><br>
+
+            <div class="card">
+                <h3>Relationships<span> Transactions</span></h3><br>
+                <p>We are not here to sell you a product and disappear.We build long-term
+                partnerships because the best IT outcomes come from understanding a client's <br>
+                business deeply ,not just their server specs.</p>
+            </div>
+
+            <div class="card">
+                <h3>Right Sized<span> And Not Oversized</span></h3><br>
+                <p>We recommand what you need,not what generates the biggest invoice.Sometimes
+                    that means a smaller deployment, a different vendor, or a phased approach.
+                we'd rather earn your trust than inflate a deal.</p>
+            </div>
+            </div>
+        </section>
+
+        <section class="services">
+                <center><h2>Our Cloud Platforms</h2></center>
+                <h3>Six Practice Areas. One Partner.</h3>
+                <h4>Available independently or as an integrated portfolio — designed to work together and scale with you.</h4>
+
+            <div class="service-text">
+                <div class="box">
+                    <h3>DOBIG Private Cloud</h3>
+                    <p>Built for businesses that need dedicated resources, data sovereignty, and complete control. Our private cloud runs on enterprise-grade hardware in Tier III+ data centers with fully redundant networking.</p>
+                    </div>
+
+                <div class="box">
+                    <h3>Amazon Web Services (AWS)</h3>
+                    <p>The world's largest and most mature cloud platform. We help you architect, deploy, and manage AWS environments — from simple EC2 instances to complex multi-region architectures with auto-scaling and AI/ML services.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Microsoft Azure</h3>
+                    <p>Seamless integration with the Microsoft ecosystem your teams already use. Azure is the natural choice for organizations running Active Directory, Office 365, Dynamics, and .NET applications.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Google Cloud Platform</h3>
+                    <p>Best-in-class data analytics, Kubernetes, and machine learning capabilities. Google Cloud is ideal for organizations that are data-intensive or building modern, containerized applications</p>
+                </div>
+
+            </div> 
+        </section>
+</main>
+
+        <footer>
+            <p><center><strong>© 2026 DOBIG Data Solutions Private Limited | All Rights Reserved</strong></center></p>
+        </footer>
+    
+</body>
+</html>
